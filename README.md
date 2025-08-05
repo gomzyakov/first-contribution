@@ -1,4 +1,4 @@
-# Your First Contribution
+# First Contribution
 
 This project will help you make your first contribution directly to GitHub via a web interface.
 
