@@ -13,8 +13,8 @@ If you have never contributed code on GitHub before, this is the project to get 
   - Optionally, add a more detailed description in the "Extended description" field.
   - Create a new branch and open a pull request.
 
-After some time, @gomzyakov will merge your PR. Congratulations, you have made your first contribution!
+After some time, [@gomzyakov](https://github.com/gomzyakov) will merge your PR. Congratulations, you have made your first contribution!
 
 ## First Time Contributors
 
-- @gomzyakov Senior PHP developer and the author of this project
+- [@gomzyakov](https://github.com/gomzyakov) Senior PHP developer and the author of this project
