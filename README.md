@@ -17,4 +17,5 @@ After some time, [@gomzyakov](https://github.com/gomzyakov) will merge your PR. 
 
 ## First Time Contributors
 
+- [@galchenok](https://github.com/galchenok) Beginner programmer. Hasn't decided on a direction yet.
 - [@gomzyakov](https://github.com/gomzyakov) Senior PHP developer and the author of this project
