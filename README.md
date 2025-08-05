@@ -17,4 +17,4 @@ After some time, @gomzyakov will merge your PR. Congratulations, you have made y
 
 ## First Time Contributors
 
-- @gomzyakov Senior PHP (Laravel) developer and the author of this project
+- @gomzyakov Senior PHP developer and the author of this project
