@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>First Contribution - Start Your Open-Source Journey</title>
+        <style>
+            :root {
+                --primary: #2d3748;
+                --secondary: #4a5568;
+                --accent: #4299e1;
+                --light: #f7fafc;
+                --dark: #1a202c;
+            }
+
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+                line-height: 1.6;
+                color: var(--dark);
+                margin: 0;
+                padding: 0;
+                background-color: var(--light);
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            header {
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 24px;
+                font-weight: 700;
+                color: var(--primary);
+                text-decoration: none;
+            }
+
+            .logo span {
+                color: var(--accent);
+            }
+
+            .nav-links a {
+                color: var(--secondary);
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: var(--accent);
+            }
+
+            .hero {
+                padding: 80px 0;
+                text-align: center;
+                background: linear-gradient(135deg, #f0f4f8 0%, #e6ebf1 100%);
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                color: var(--primary);
+            }
+
+            .hero p {
+                font-size: 20px;
+                max-width: 700px;
+                margin: 0 auto 40px;
+                color: var(--secondary);
+            }
+
+            .cta-button {
+                display: inline-block;
+                background-color: var(--accent);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 18px;
+                transition: transform 0.3s, box-shadow 0.3s;
+                box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
+            }
+
+            .features {
+                padding: 80px 0;
+                background-color: white;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 60px;
+                color: var(--primary);
+            }
+
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .feature-card {
+                background-color: var(--light);
+                border-radius: 8px;
+                padding: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .feature-icon {
+                font-size: 40px;
+                color: var(--accent);
+                margin-bottom: 20px;
+            }
+
+            .feature-card h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+                color: var(--primary);
+            }
+
+            .how-it-works {
+                padding: 80px 0;
+                background-color: #f8fafc;
+            }
+
+            .steps {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .step {
+                display: flex;
+                margin-bottom: 40px;
+                align-items: flex-start;
+            }
+
+            .step-number {
+                background-color: var(--accent);
+                color: white;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                margin-right: 20px;
+                flex-shrink: 0;
+            }
+
+            .step-content h3 {
+                font-size: 22px;
+                margin-bottom: 10px;
+                color: var(--primary);
+            }
+
+            .testimonials {
+                padding: 80px 0;
+                background-color: white;
+            }
+
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .testimonial-card {
+                background-color: var(--light);
+                border-radius: 8px;
+                padding: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            }
+
+            .testimonial-text {
+                font-style: italic;
+                margin-bottom: 20px;
+            }
+
+            .testimonial-author {
+                font-weight: 600;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+                text-align: center;
+                background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+                color: white;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            .cta-section p {
+                font-size: 20px;
+                max-width: 700px;
+                margin: 0 auto 40px;
+                opacity: 0.9;
+            }
+
+            .white-button {
+                display: inline-block;
+                background-color: white;
+                color: var(--accent);
+                padding: 12px 30px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 18px;
+                transition: transform 0.3s;
+            }
+
+            .white-button:hover {
+                transform: translateY(-2px);
+            }
+
+            footer {
+                background-color: var(--dark);
+                color: white;
+                padding: 50px 0 20px;
+            }
+
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+
+            .footer-column h3 {
+                font-size: 18px;
+                margin-bottom: 20px;
+                color: var(--accent);
+            }
+
+            .footer-column ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer-column ul li {
+                margin-bottom: 10px;
+            }
+
+            .footer-column ul li a {
+                color: #cbd5e0;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer-column ul li a:hover {
+                color: white;
+            }
+
+            .copyright {
+                text-align: center;
+                padding-top: 20px;
+                border-top: 1px solid #4a5568;
+                color: #cbd5e0;
+                font-size: 14px;
+            }
+
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 36px;
+                }
+
+                .hero p {
+                    font-size: 18px;
+                }
+
+                .nav-links {
+                    display: none;
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <a class="logo" href="#">First<span>Contribution</span></a>
+                    <div class="nav-links">
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#testimonials">Success Stories</a>
+                        <a href="#cta">Get Started</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Start With FirstContribution</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Beginner-Friendly</h3>
+                        <p>We specifically select issues that are perfect for first-time contributors, with clear
+                            instructions and supportive maintainers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Real Projects</h3>
+                        <p>Contribute to actual open-source projects used by thousands, not just tutorial repositories.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community Support</h3>
+                        <p>Join our Discord community where you can ask questions and get help from experienced
+                            contributors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Find a Suitable Project</h3>
+                            <p>We curate a list of projects that welcome beginners and have good first issues labeled.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Set Up Your Environment</h3>
+                            <p>Follow our step-by-step guide to fork the repository, clone it locally, and set up the
+                                development environment.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Make Your Contribution</h3>
+                            <p>Work on the issue, commit your changes, and push to your fork following our contribution
+                                guidelines.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Create a Pull Request</h3>
+                            <p>We'll guide you through creating your first PR, writing a good description, and
+                                interacting with maintainers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3></h3>
+                        <p>.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Getting Started Guide</a></li>
+                            <li><a href="#">Git Handbook</a></li>
+                            <li><a href="#">Open-source Etiquette</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">GitHub Organization</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 FirstContribution. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

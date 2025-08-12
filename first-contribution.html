@@ -1,0 +1,561 @@
+<!doctype html>
+<html data-bs-theme="dark" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>First Contribution — Make your first open‑source contribution</title>
+        <meta
+            content="First Contribution helps beginners make their first open-source contribution on GitHub with a safe, step-by-step tutorial."
+            name="description" />
+        Bootstrap 5.3.3 CSS
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet" />
+        <style>
+            :root {
+                scroll-behavior: smooth;
+            }
+
+            /* Helpers for this page */
+            .brand-dot {
+                width: 24px;
+                height: 24px;
+                background-color: #198754;
+                border-radius: .375rem;
+            }
+
+            .hero-gradient {
+                background: radial-gradient(1200px 400px at 20% 10%, rgba(25, 135, 84, .25), transparent 60%);
+            }
+
+            .code-snippet {
+                position: relative;
+            }
+
+            .code-snippet pre {
+                margin: 0;
+                border-radius: .5rem;
+            }
+
+            .copy-btn {
+                position: absolute;
+                top: .5rem;
+                right: .5rem;
+                z-index: 2;
+            }
+
+            .icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            .icon-lg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .card-elevated {
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+            }
+        </style>
+    </head>
+    <body class="bg-dark text-light">
+        Navbar
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary fixed-top">
+            <div class="container">
+                <a aria-label="First Contribution home" class="navbar-brand d-flex align-items-center gap-2"
+                    href="#">
+                    <span aria-hidden="true" class="brand-dot"></span>
+                    <span class="fw-semibold">First Contribution</span>
+                </a>
+                <button aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="mainNavbar">
+                    <ul class="navbar-nav mb-lg-0 mb-2 ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tutorial">Tutorial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-1"
+                                href="https://github.com/your-org/first-contribution" rel="noopener noreferrer"
+                                target="_blank">
+                                GitHub icon
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5A12 12 0 0 0 0 12.8c0 5.44 3.44 10.05 8.21 11.68c.6.12.82-.27.82-.59c0-.29-.01-1.05-.02-2.06c-3.34.75-4.04-1.64-4.04-1.64c-.55-1.45-1.34-1.84-1.34-1.84c-1.09-.77.08-.76.08-.76c1.2.09 1.83 1.27 1.83 1.27c1.07 1.88 2.8 1.34 3.48 1.03c.11-.8.42-1.34.77-1.65c-2.66-.31-5.46-1.37-5.46-6.11c0-1.35.46-2.46 1.22-3.33c-.12-.31-.53-1.57.12-3.27c0 0 1-.33 3.28 1.27c.95-.27 1.96-.4 2.97-.41c1.01.01 2.02.14 2.97.41c2.28-1.6 3.28-1.27 3.28-1.27c.65 1.7.24 2.96.12 3.27c.76.87 1.22 1.98 1.22 3.33c0 4.76-2.8 5.79-5.47 6.1c.43.38.82 1.11.82 2.25c0 1.63-.02 2.94-.02 3.34c0 .32.21.71.83.59A12.3 12.3 0 0 0 24 12.8A12 12 0 0 0 12 .5Z"
+                                        fill="currentColor" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        Spacer for fixed navbar
+        <div style="height: 56px"></div>
+
+        Hero
+        <header class="border-bottom border-secondary-subtle hero-gradient py-5">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6">
+                        <span class="badge text-bg-success-subtle text-success-emphasis mb-3">Beginner‑friendly</span>
+                        <h1 class="display-5 fw-bold">Make your first open‑source contribution on GitHub</h1>
+                        <p class="lead text-secondary">
+                            First Contribution is a guided path for developers who want to contribute to open source for
+                            the first time.
+                            Learn the workflow, practice safely, and open your first pull request with confidence.
+                        </p>
+                        <div class="d-flex mt-3 flex-wrap gap-2">
+                            <a class="btn btn-success btn-lg" href="#tutorial">Start the Tutorial</a>
+                            <a class="btn btn-outline-light btn-lg" href="#how-it-works">How it works</a>
+                        </div>
+                        <div class="d-flex text-secondary mt-4 flex-wrap gap-4">
+                            <span class="d-inline-flex align-items-center gap-2">
+                                check
+                                <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19l12-12l-1.41-1.41z" fill="currentColor" />
+                                </svg>
+                                No experience required
+                            </span>
+                            <span class="d-inline-flex align-items-center gap-2">
+                                users
+                                <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                    <path
+                                        d="M16 11a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-8 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4m8 0c-.32 0-.67.02-1.05.06c1.24.9 2.05 2.14 2.05 3.94v2h7v-2c0-2.66-5.33-4-8-4"
+                                        fill="currentColor" />
+                                </svg>
+                                Friendly maintainers
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card bg-body-tertiary border-secondary-subtle card-elevated">
+                            <div class="card-body">
+                                Inline illustrative SVG instead of external image
+                                <svg aria-label="Illustration of a code editor and pull request view" class="w-100"
+                                    role="img" viewBox="0 0 720 420">
+                                    <rect fill="hsl(210, 6%, 20%)" height="420" rx="12" width="720" x="0"
+                                        y="0"></rect>
+                                    <rect fill="hsl(210, 6%, 26%)" height="24" rx="6" width="688" x="16"
+                                        y="16"></rect>
+                                    <circle cx="36" cy="28" fill="#ef4444" r="6" />
+                                    <circle cx="56" cy="28" fill="#f59e0b" r="6" />
+                                    <circle cx="76" cy="28" fill="#10b981" r="6" />
+                                    <rect fill="hsl(210, 6%, 24%)" height="348" rx="8" width="200" x="16"
+                                        y="56"></rect>
+                                    <rect fill="hsl(210, 6%, 24%)" height="56" rx="8" width="472"
+                                        x="232" y="56"></rect>
+                                    <rect fill="hsl(210, 6%, 18%)" height="284" rx="8" width="472"
+                                        x="232" y="120"></rect>
+                                    code lines
+                                    <g fill="#9ca3af">
+                                        <rect height="10" rx="3" width="280" x="248" y="140"></rect>
+                                        <rect height="10" rx="3" width="340" x="248" y="160"></rect>
+                                        <rect height="10" rx="3" width="220" x="248" y="180"></rect>
+                                        <rect height="10" rx="3" width="380" x="248" y="210"></rect>
+                                        <rect height="10" rx="3" width="260" x="248" y="230"></rect>
+                                        <rect height="10" rx="3" width="310" x="248" y="250"></rect>
+                                        <rect height="10" rx="3" width="400" x="248" y="280"></rect>
+                                        <rect height="10" rx="3" width="280" x="248" y="300"></rect>
+                                        <rect height="10" rx="3" width="350" x="248" y="320"></rect>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                CTA Box
+                <div aria-label="Call to action" class="alert alert-success-subtle border-success-subtle mt-4 border"
+                    role="region">
+                    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
+                        <div class="flex-grow-1">
+                            <h2 class="h4 mb-1">Ready to make your first contribution?</h2>
+                            <p class="text-secondary mb-0">Follow the guided tutorial below, then open your first pull
+                                request. We&#39;re excited to welcome you!</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-success" href="#tutorial">Get Started</a>
+                            <a class="btn btn-outline-light d-inline-flex align-items-center gap-2"
+                                href="https://github.com/your-org/first-contribution" rel="noopener noreferrer"
+                                target="_blank">
+                                star icon
+                                <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="m12 17.27l6.18 3.73l-1.64-7.03L21 9.24l-7.19-.61L12 2L10.19 8.63L3 9.24l4.46 4.73L5.82 21z"
+                                        fill="currentColor" />
+                                </svg>
+                                Star on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        How it works
+        <section class="py-5" id="how-it-works">
+            <div class="container">
+                <div class="col-lg-8 px-0">
+                    <h2 class="h1 fw-bold">How it works</h2>
+                    <p class="text-secondary">A simple, three‑step path from zero to your first pull request.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+                    <div class="col">
+                        <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2 gap-2">
+                                    graduation cap
+                                    <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                        <path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3Zm0 11L4.62 9L12 5l7.38 4L12 14Z"
+                                            fill="currentColor" />
+                                        <path d="M6 10v4.5a6 6 0 0 0 12 0V10h-2v4.5a4 4 0 0 1-8 0V10H6Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <h3 class="h5 mb-0">Learn</h3>
+                                </div>
+                                <p class="text-secondary mb-0">Understand the Git and GitHub workflow: fork, clone,
+                                    branch, commit, push, and open a pull request.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2 gap-2">
+                                    terminal
+                                    <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                        <path d="M3 4h18v16H3z" fill="currentColor" opacity=".2" />
+                                        <path
+                                            d="M3 20h18V4H3v16Zm2-2V6h14v12H5Zm2-2l3-3l-3-3l1.4-1.4L12.8 13L8.4 17L7 16Zm5 0h4v-2h-4v2Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <h3 class="h5 mb-0">Practice</h3>
+                                </div>
+                                <p class="text-secondary mb-0">Follow a safe, guided tutorial designed for
+                                    first‑timers. No risk to real projects while you learn.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2 gap-2">
+                                    git pull request
+                                    <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                        <path
+                                            d="M6 3a3 3 0 0 0 0 6a3 3 0 0 0 0-6Zm0 8a3 3 0 0 0 0 6a3 3 0 0 0 0-6Zm12-8a3 3 0 1 0 0 6a3 3 0 0 0 0-6ZM9 6h6a3 3 0 0 1 3 3v9h-2V9a1 1 0 0 0-1-1H9V6Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                    <h3 class="h5 mb-0">Contribute</h3>
+                                </div>
+                                <p class="text-secondary mb-0">Apply your skills to real repositories. Find
+                                    beginner‑friendly issues and make meaningful contributions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        Tutorial
+        <section class="border-top border-secondary-subtle py-5" id="tutorial">
+            <div class="container">
+                <div class="col-lg-8 px-0">
+                    <h2 class="h1 fw-bold">Your first contribution</h2>
+                    <p class="text-secondary">Follow these steps to create your first pull request. You can safely
+                        experiment here.</p>
+                </div>
+
+                <div class="accordion mt-3" id="tutorialAccordion">
+                    Step 1
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-1">
+                            <button aria-controls="collapse-1" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-1"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">01</span>
+                                <span class="fw-semibold">Fork the repository</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-1" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-1">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Click the Fork button on the repository page to create your
+                                    own copy under your GitHub account.</p>
+                            </div>
+                        </div>
+                    </div>
+                    Step 2
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-2">
+                            <button aria-controls="collapse-2" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-2"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">02</span>
+                                <span class="fw-semibold">Clone your fork</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-2" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-2">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Clone your fork to your local machine. Replace
+                                    <code>your-username</code> with your actual GitHub username.</p>
+                                <div class="code-snippet mt-2">
+                                    <button aria-label="Copy commands for step 2"
+                                        class="btn btn-sm btn-outline-secondary copy-btn" data-copy-target="#code-2"
+                                        type="button">Copy</button>
+                                    <pre class="bg-dark text-light overflow-auto rounded border p-3"><code id="code-2">git clone https://github.com/your-username/first-contribution.git
+cd first-contribution</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Step 3
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-3">
+                            <button aria-controls="collapse-3" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-3"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">03</span>
+                                <span class="fw-semibold">Configure the original repository as upstream</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-3" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-3">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Add an upstream remote to keep your fork up to date with the
+                                    original repository.</p>
+                                <div class="code-snippet mt-2">
+                                    <button aria-label="Copy commands for step 3"
+                                        class="btn btn-sm btn-outline-secondary copy-btn" data-copy-target="#code-3"
+                                        type="button">Copy</button>
+                                    <pre class="bg-dark text-light overflow-auto rounded border p-3"><code id="code-3">git remote add upstream https://github.com/your-org/first-contribution.git
+git remote -v</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Step 4
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-4">
+                            <button aria-controls="collapse-4" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-4"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">04</span>
+                                <span class="fw-semibold">Create a new branch</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-4" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-4">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Create and switch to a new branch for your changes. Use a
+                                    descriptive branch name.</p>
+                                <div class="code-snippet mt-2">
+                                    <button aria-label="Copy commands for step 4"
+                                        class="btn btn-sm btn-outline-secondary copy-btn" data-copy-target="#code-4"
+                                        type="button">Copy</button>
+                                    <pre class="bg-dark text-light overflow-auto rounded border p-3"><code id="code-4">git checkout -b add-your-name</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Step 5
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-5">
+                            <button aria-controls="collapse-5" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-5"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">05</span>
+                                <span class="fw-semibold">Make your change</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-5" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-5">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Edit the <code>CONTRIBUTORS.md</code> file and add your name.
+                                    Save the file when you are done.</p>
+                            </div>
+                        </div>
+                    </div>
+                    Step 6
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-6">
+                            <button aria-controls="collapse-6" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-6"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">06</span>
+                                <span class="fw-semibold">Stage and commit</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-6" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-6">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Stage your changes and commit with a clear message.</p>
+                                <div class="code-snippet mt-2">
+                                    <button aria-label="Copy commands for step 6"
+                                        class="btn btn-sm btn-outline-secondary copy-btn" data-copy-target="#code-6"
+                                        type="button">Copy</button>
+                                    <pre class="bg-dark text-light overflow-auto rounded border p-3"><code id="code-6">git add CONTRIBUTORS.md
+git commit -m "Add your-name to contributors list"</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Step 7
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-7">
+                            <button aria-controls="collapse-7" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-7"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">07</span>
+                                <span class="fw-semibold">Push your branch</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-7" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-7">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Push your branch to your fork on GitHub.</p>
+                                <div class="code-snippet mt-2">
+                                    <button aria-label="Copy commands for step 7"
+                                        class="btn btn-sm btn-outline-secondary copy-btn" data-copy-target="#code-7"
+                                        type="button">Copy</button>
+                                    <pre class="bg-dark text-light overflow-auto rounded border p-3"><code id="code-7">git push origin add-your-name</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    Step 8
+                    <div class="accordion-item bg-body-tertiary border-secondary-subtle">
+                        <h2 class="accordion-header" id="heading-8">
+                            <button aria-controls="collapse-8" aria-expanded="false"
+                                class="accordion-button collapsed" data-bs-target="#collapse-8"
+                                data-bs-toggle="collapse" type="button">
+                                <span class="badge text-bg-success me-2">08</span>
+                                <span class="fw-semibold">Open a pull request</span>
+                            </button>
+                        </h2>
+                        <div aria-labelledby="heading-8" class="accordion-collapse collapse"
+                            data-bs-parent="#tutorialAccordion" id="collapse-8">
+                            <div class="accordion-body">
+                                <p class="text-secondary">Go to your fork on GitHub and click <em>Compare &amp; pull
+                                        request</em>. Describe your change and submit the PR.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-secondary mt-3">Tip: If you get stuck, search for the exact error message or ask for
+                    help in project discussions.</p>
+            </div>
+        </section>
+
+        Resources
+        <section class="py-5">
+            <div class="container">
+                <div class="col-lg-8 px-0">
+                    <h2 class="h1 fw-bold">Resources</h2>
+                    <p class="text-secondary">Everything you need to go from zero to contributing with confidence.</p>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-1">
+                    <div class="col">
+                        <a class="text-decoration-none text-reset" href="#tutorial">
+                            <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2 gap-2">
+                                        book
+                                        <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 2h10a2 2 0 0 1 2 2v15.5a.5.5 0 0 1-.79.41L14 18l-3.21 1.91a.5.5 0 0 1-.79-.41V4a2 2 0 0 0-2-2Z"
+                                                fill="currentColor" />
+                                            <path d="M6 2a2 2 0 0 0-2 2v16h14V4a2 2 0 0 0-2-2" fill="currentColor" />
+                                        </svg>
+                                        <h3 class="h6 mb-0">Contributor Guide</h3>
+                                    </div>
+                                    <p class="text-secondary mb-0">A practical guide to Git, GitHub, and contributing
+                                        conventions.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a class="text-decoration-none text-reset" href="https://github.com/topics/good-first-issue"
+                            rel="noopener noreferrer" target="_blank">
+                            <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2 gap-2">
+                                        compass
+                                        <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                            <path
+                                                d="m14.19 14.19l-7.07 3.54l3.54-7.07l7.07-3.54l-3.54 7.07ZM12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                        <h3 class="h6 mb-0">Find Beginner Issues</h3>
+                                    </div>
+                                    <p class="text-secondary mb-0">Discover first‑timers‑only and good first issues
+                                        across GitHub.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a class="text-decoration-none text-reset"
+                            href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/"
+                            rel="noopener noreferrer" target="_blank">
+                            <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2 gap-2">
+                                        shield
+                                        <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                            <path d="M12 2L4 5v6c0 5 3.8 9.7 8 11c4.2-1.3 8-6 8-11V5l-8-3Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                        <h3 class="h6 mb-0">Code of Conduct</h3>
+                                    </div>
+                                    <p class="text-secondary mb-0">Be kind and inclusive. Read our Code of Conduct
+                                        before contributing.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a class="text-decoration-none text-reset" href="#how-it-works">
+                            <div class="card h-100 bg-body-tertiary border-secondary-subtle">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2 gap-2">
+                                        rocket
+                                        <svg aria-hidden="true" class="icon text-success" viewBox="0 0 24 24">
+                                            <path
+                                                d="M5 14s1-1 4-1s5 3 5 3s-3 0-5 2s-3 5-3 5s-1-1 0-4s-3-5-3-5Zm12-7l-2 2l3 3l2-2c.5-.5.5-1.3 0-1.8l-1.2-1.2a1.27 1.27 0 0 0-1.8 0ZM6.5 11.5l3 3l6.5-6.5l-3-3L6.5 11.5Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                        <h3 class="h6 mb-0">Next Steps</h3>
+                                    </div>
+                                    <p class="text-secondary mb-0">From your first PR to your first feature. Grow your
+                                        impact.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        Bootstrap 5.3.3 Bundle (Popper included)
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+       
+    </body>
+</html>
